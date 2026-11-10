@@ -1,5 +1,54 @@
 export const projects = [
   {
+    id: "ai-data-analyst-agent",
+    title: "AI-Powered Data Analyst Agent",
+    category: "Agentic AI & Data Analytics",
+    summary: "Autonomous AI agent system designed to automate exploratory data analysis, SQL query generation, and visualization pipelines.",
+    description: "An end-to-end agentic workflow that converts natural language queries into complex data analyses, automated visual charts, and actionable executive insights.",
+    highlights: [
+      "Autonomous query generation & statistical analysis workflow",
+      "Automated data visualization and insight generation",
+      "Embedded interactive video demo showcasing real-time execution"
+    ],
+    tags: [
+      "Python",
+      "LangChain / AI Agents",
+      "Pandas",
+      "SQL",
+      "LLMs",
+      "FastAPI / Streamlit"
+    ],
+    liveUrl: "",
+    githubUrl: "https://github.com/nidhi713/AI-Powered-Data-Analyst-Agent",
+    demoVideoUrl: "https://raw.githubusercontent.com/nidhi713/AI-Powered-Data-Analyst-Agent/main/demo.mp4",
+    featured: true,
+    color: "purple",
+    year: "2024",
+    metrics: ["Autonomous SQL & EDA", "Dynamic Chart Synthesis", "Interactive Video Demo"],
+    architecture: {
+      overview: "Autonomous data science agent capable of executing complex relational queries, pandas statistical analyses, and generating interactive charts directly from natural language prompts.",
+      flow: [
+        "Natural Language Query Ingestion",
+        "Schema & Table Inspection",
+        "LangChain SQL / Python Code Synthesizer",
+        "Sandboxed Execution & REPL Loop",
+        "Automated Matplotlib / Plotly Visualization",
+        "Narrative Executive Insight Summary"
+      ],
+      challenges: [
+        "Eliminated SQL injection and destructive execution hazards using read-only AST parser and sandboxed Python runner.",
+        "Engineered automatic syntax correction loop: if code execution errors out, the agent reflects on traceback and self-heals in sub-1s.",
+        "Generated publication-ready charts and dynamic markdown data summaries formatted for executive presentations."
+      ],
+      stack: {
+        "Agent Framework": "LangChain, ReAct Agent Architecture",
+        "Data & Analysis": "Python, Pandas, NumPy, SQLite / PostgreSQL",
+        "Visualization & UI": "Streamlit, FastAPI, Plotly",
+        "Repository": "github.com/nidhi713/AI-Powered-Data-Analyst-Agent"
+      }
+    }
+  },
+  {
     id: "mind-wandering-detection",
     title: "Vision-Based Mind Wandering Detection",
     category: "Computer Vision & Deep Learning",
@@ -223,6 +272,7 @@ export const projects = [
 
 export const categories = [
   "All",
+  "Agentic AI & Data Analytics",
   "Computer Vision & Deep Learning",
   "Agentic AI",
   "RAG & LLMs",

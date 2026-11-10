@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import {
   ExternalLink, Github, Star, ArrowRight, Zap,
-  Layers, X, CheckCircle2, Cpu, ChevronRight
+  Layers, X, CheckCircle2, Cpu, ChevronRight, Play
 } from 'lucide-react'
 import { projects, categories } from '../data/projects.js'
 
@@ -76,13 +76,21 @@ function ProjectCard({ project, index, onSelect }) {
             backgroundSize: '24px 24px',
           }}
         />
-        {/* Featured badge */}
-        {project.featured && (
-          <div className={`absolute top-3 right-3 flex items-center gap-1 px-2 py-1 rounded-md text-[10px] font-semibold border ${c.badge}`}>
-            <Star size={9} fill="currentColor" />
-            Featured
-          </div>
-        )}
+        {/* Badges */}
+        <div className="absolute top-3 right-3 flex items-center gap-1.5">
+          {project.demoVideoUrl && (
+            <div className="flex items-center gap-1 px-2 py-1 rounded-md text-[10px] font-semibold border bg-[#7c3aed]/20 text-[#a78bfa] border-[#7c3aed]/30 shadow-[0_0_12px_rgba(124,58,237,0.3)]">
+              <Play size={9} fill="currentColor" />
+              Video Demo
+            </div>
+          )}
+          {project.featured && (
+            <div className={`flex items-center gap-1 px-2 py-1 rounded-md text-[10px] font-semibold border ${c.badge}`}>
+              <Star size={9} fill="currentColor" />
+              Featured
+            </div>
+          )}
+        </div>
         {/* Year */}
         <div className="absolute top-3 left-3 text-[10px] font-mono text-white/30 font-medium">
           {project.year}
@@ -213,6 +221,30 @@ function ArchitectureModal({ project, onClose }) {
 
         {/* Scrollable Body */}
         <div className="p-6 overflow-y-auto space-y-6">
+          {/* Embedded Video Demo Player */}
+          {project.demoVideoUrl && (
+            <div className="rounded-xl overflow-hidden border border-white/[0.1] bg-black/60 shadow-[0_12px_40px_rgba(0,0,0,0.6)]">
+              <div className="flex items-center justify-between px-4 py-2.5 bg-white/[0.04] border-b border-white/[0.06] text-xs font-mono text-white/80">
+                <div className="flex items-center gap-2">
+                  <Play size={13} className="text-[#00d4ff]" />
+                  <span className="font-semibold text-white">Live Execution Demo</span>
+                </div>
+                <span className="text-[10px] text-white/40">Raw GitHub MP4</span>
+              </div>
+              <div className="relative aspect-video bg-black flex items-center justify-center">
+                <video
+                  controls
+                  playsInline
+                  preload="metadata"
+                  className="w-full h-full object-contain"
+                  src={project.demoVideoUrl}
+                >
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          )}
+
           {/* Overview */}
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-wider text-white/40 mb-2">System Overview</h4>
