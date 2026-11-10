@@ -17,8 +17,8 @@ const aiResponses = {
   about: "Nidhi Kumari is an Agentic AI Engineer & Systems Developer specializing in multi-agent orchestration, RAG architectures, computer vision, and scalable data intelligence pipelines.",
   roles: "Primary roles: Agentic AI Engineer, LLM & RAG Application Developer, Machine Learning & Data Scientist, and Generative AI Systems Developer.",
   skills: "Key Stack: LangChain, LlamaIndex, Agentic Workflows, Qdrant, PyTorch, Scikit-Learn, Python, Pandas, NumPy, OpenCV, FastAPI, React, Next.js, Docker, MySQL, and Tableau.",
-  projects: "Featured Systems: 1) Blinkit Sales & Performance Analysis, 2) AI-Powered Data Analyst Agent (with live video demo), 3) Vision-Based Mind Wandering Detection, 4) Agentic Workflow Automation Platform, 5) RAG-based Knowledge QA, 6) Real-Time Data Analytics Pipeline, 7) Autonomous Multi-Agent Orchestrator.",
-  certifications: "Verified Specializations: Deep Learning Specialization (DeepLearning.AI / Andrew Ng), LangChain for LLM Application Development (Harrison Chase), Machine Learning (IBM / Coursera), Computer Vision (OpenCV University).",
+  projects: "Verified Projects: 1) Megh Mitra — AI Weather & Advisory System (BMSK Patna), 2) AI-Powered Data Analyst Agent (with live video demo), 3) Blinkit Sales & Performance Analysis (with custom EDA chart showcase), 4) Vision-Based Mind Wandering Detection.",
+  certifications: "Verified Credentials: 1) AI & Data Science Internship (Grade A) – C-DAC Patna, 2) Fundamentals of OOP (Elite + Top 5% Topper, 90% Score) – NPTEL / IIT Roorkee, 3) Data Analysis Certification – ExcelR, 4) 200+ Solved DSA Problems benchmark.",
   contact: "Email: nidhitiwaryy011@gmail.com | LinkedIn: https://www.linkedin.com/in/nidhi-kumari-6b0331308/ | GitHub: https://github.com/nidhi713",
   resume: "Downloading Nidhi Kumari's Resume...",
 }

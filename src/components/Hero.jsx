@@ -41,10 +41,10 @@ export default function Hero() {
   }, [charIndex, isDeleting, roleIndex])
 
   const stats = [
-    { value: '5+', label: 'Years Experience' },
-    { value: '40+', label: 'Projects Shipped' },
-    { value: '12k+', label: 'GitHub Stars' },
-    { value: '99%', label: 'Client Satisfaction' },
+    { value: '200+', label: 'DSA Problems Solved' },
+    { value: '7+', label: 'AI & Data Projects' },
+    { value: 'Top 5%', label: 'NPTEL Elite (90%)' },
+    { value: 'Grade A', label: 'C-DAC Certified' },
   ]
 
   return (

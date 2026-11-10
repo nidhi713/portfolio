@@ -25,14 +25,11 @@
 ## 🛠️ Data Layers
 
 ### 1. Projects Store (`src/data/projects.js`)
-Configured with 7 enterprise AI/ML, Agentic, Computer Vision & Data Analytics entries:
-1. **Blinkit Sales & Performance Analysis**: Python, Pandas, NumPy, Matplotlib, Seaborn, EDA ([Repo](https://github.com/nidhi713/Blinkit-Sales-Analysis-Python) · Custom Chart Visual Rendering)
+Configured with 4 verified production AI, ML, Computer Vision & Data Analytics entries:
+1. **Megh Mitra — AI Weather & Advisory System**: Python, FastAPI, LangChain, RAG / LLMs, Agro-Meteorology (Flagship project at BMSK Patna)
 2. **AI-Powered Data Analyst Agent**: LangChain, Python, Pandas, SQL, LLMs, Streamlit ([Repo](https://github.com/nidhi713/AI-Powered-Data-Analyst-Agent) · Interactive Video Demo Supported)
-3. **Vision-Based Mind Wandering Detection**: Python, OpenCV, PyTorch / TensorFlow, Computer Vision, Facial Landmarks ([Repo](https://github.com/nidhi713/Vision-based-mind-wandering-detection-))
-4. **Agentic Workflow Automation Platform**: LangChain, FastAPI, React, Python
-5. **RAG-based Knowledge Retrieval & QA System**: LlamaIndex, Qdrant, Streamlit, Python
-6. **Real-Time Data Analytics & ML Pipeline**: Python, SQL, Tableau, Scikit-Learn
-7. **Autonomous Multi-Agent Task Orchestrator**: Python, AutoGen, OpenAI API, Next.js
+3. **Blinkit Sales & Performance Analysis**: Python, Pandas, NumPy, Matplotlib, Seaborn, EDA ([Repo](https://github.com/nidhi713/Blinkit-Sales-Analysis-Python) · Custom Chart Visual Rendering)
+4. **Vision-Based Mind Wandering Detection**: Python, OpenCV, PyTorch / TensorFlow, Computer Vision, Facial Landmarks ([Repo](https://github.com/nidhi713/Vision-based-mind-wandering-detection-))
 
 ### 2. Skills Matrix (`src/data/skills.js`)
 1. **AI & GenAI**: LangChain (95%), LlamaIndex (92%), Agentic Workflows (96%), RAG Architecture (94%), OpenAI / Gemini APIs (95%), Hugging Face (88%)

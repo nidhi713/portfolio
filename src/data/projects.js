@@ -1,50 +1,49 @@
 export const projects = [
   {
-    id: "blinkit-sales-analysis",
-    title: "Blinkit Sales & Performance Analysis",
-    category: "Data Analytics & Visualization",
-    summary: "Comprehensive end-to-end data analysis pipeline evaluating sales metrics, outlet performance, and consumer purchasing patterns.",
-    description: "Exploratory data analysis and visualization pipeline built to analyze sales performance, item type distributions, outlet size efficiency, and revenue drivers across various location tiers.",
+    id: "megh-mitra-ai",
+    title: "Megh Mitra — AI Weather & Advisory System",
+    category: "Generative AI & Agro-Meteorology",
+    summary: "Intelligent agro-meteorological conversational AI and voice advisory platform developed for Bihar Mausam Sewa Kendra (BMSK Patna).",
+    description: "Production conversational AI system combining RAG architectures, LLMs, and real-time weather telemetry to provide localized agro-meteorological advisories, weather risk alerts, and voice-assisted query resolution.",
     highlights: [
-      "Statistical EDA across sales revenue, fat content, and outlet age",
-      "Item visibility and outlet size impact analysis",
-      "Rich visual dashboards displaying key business performance indicators (KPIs)"
+      "RAG architecture integrated with real-time meteorological observation feeds",
+      "Bilingual agro-advisory inference tailored for localized farming communities",
+      "High-availability API backend powering telemetry queries and localized alerts"
     ],
     tags: [
       "Python",
-      "Pandas",
-      "NumPy",
-      "Matplotlib",
-      "Seaborn",
-      "Data Analytics / EDA"
+      "FastAPI",
+      "LangChain",
+      "RAG / LLMs",
+      "Agro-Meteorology",
+      "Generative AI"
     ],
     liveUrl: "",
-    githubUrl: "https://github.com/nidhi713/Blinkit-Sales-Analysis-Python",
-    imageUrl: "https://raw.githubusercontent.com/nidhi713/Blinkit-Sales-Analysis-Python/main/Blinkit%20Project/images/outlet_size_sales.png",
+    githubUrl: "https://github.com/nidhi713",
     featured: true,
-    color: "green",
-    year: "2024",
-    metrics: ["Statistical EDA", "Outlet Size & Location KPIs", "Custom Matplotlib Charts"],
+    color: "cyan",
+    year: "2026",
+    metrics: ["BMSK Production System", "RAG Knowledge Engine", "Live Telemetry Ingestion"],
     architecture: {
-      overview: "Comprehensive exploratory data analysis and visualization workflow evaluating grocery retail telemetry, item visibility, and location tier revenue distribution.",
+      overview: "Enterprise RAG and Generative AI system built for Bihar Mausam Sewa Kendra (BMSK Patna) to deliver real-time localized weather telemetry and automated advisory intelligence.",
       flow: [
-        "Raw Retail Dataset Ingestion (8,523 records)",
-        "Data Cleaning & Missing Value Imputation (Pandas)",
-        "Feature Engineering (Outlet Age, Item Categorization)",
-        "Statistical Distribution & Correlation Analysis",
-        "Matplotlib & Seaborn Chart Generation",
-        "Executive Strategy Recommendations"
+        "Automatic Telemetry Ingestion (Weather Stations)",
+        "Data Validation & Preprocessing Pipeline",
+        "RAG Vector Embeddings & Context Retrieval",
+        "LLM Agro-Advisory Reasoning Engine",
+        "FastAPI Microservice Response Synthesis",
+        "End-User Advisory Dissemination"
       ],
       challenges: [
-        "Handled inconsistent categorical labels ('LF', 'low fat', 'reg') by implementing normalized standardization rules.",
-        "Discovered that Tier 3 cities drove the highest outlet sales volume despite lower individual item visibility.",
-        "Constructed comparative subplots displaying outlet establishment year trends and fat-content pricing distributions."
+        "Engineered low-latency context retrieval fusing tabular weather data with unstructured agricultural advisory guidelines.",
+        "Implemented strict hallucination safeguards and guardrails ensuring agricultural safety and forecast reliability.",
+        "Designed asynchronous REST microservices processing concurrent multi-station meteorological telemetry."
       ],
       stack: {
-        "Data Manipulation": "Python 3.10+, Pandas, NumPy",
-        "Visualization": "Matplotlib, Seaborn",
-        "Environment": "Jupyter Notebook / VS Code",
-        "Repository": "github.com/nidhi713/Blinkit-Sales-Analysis-Python"
+        "AI & RAG": "Python, LangChain, RAG Architecture, LLMs",
+        "Backend & APIs": "FastAPI, Pydantic, Uvicorn",
+        "Data & Telemetry": "Pandas, NumPy, Time-Series Weather Data",
+        "Organization": "Bihar Mausam Sewa Kendra (BMSK Patna)"
       }
     }
   },
@@ -98,6 +97,55 @@ export const projects = [
     }
   },
   {
+    id: "blinkit-sales-analysis",
+    title: "Blinkit Sales & Performance Analysis",
+    category: "Data Analytics & Visualization",
+    summary: "Comprehensive end-to-end data analysis pipeline evaluating sales metrics, outlet performance, and consumer purchasing patterns.",
+    description: "Exploratory data analysis and visualization pipeline built to analyze sales performance, item type distributions, outlet size efficiency, and revenue drivers across various location tiers.",
+    highlights: [
+      "Statistical EDA across sales revenue, fat content, and outlet age",
+      "Item visibility and outlet size impact analysis",
+      "Rich visual dashboards displaying key business performance indicators (KPIs)"
+    ],
+    tags: [
+      "Python",
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "Seaborn",
+      "Data Analytics / EDA"
+    ],
+    liveUrl: "",
+    githubUrl: "https://github.com/nidhi713/Blinkit-Sales-Analysis-Python",
+    imageUrl: "https://raw.githubusercontent.com/nidhi713/Blinkit-Sales-Analysis-Python/main/Blinkit%20Project/images/outlet_size_sales.png",
+    featured: true,
+    color: "green",
+    year: "2024",
+    metrics: ["Statistical EDA", "Outlet Size & Location KPIs", "Custom Matplotlib Charts"],
+    architecture: {
+      overview: "Comprehensive exploratory data analysis and visualization workflow evaluating grocery retail telemetry, item visibility, and location tier revenue distribution.",
+      flow: [
+        "Raw Retail Dataset Ingestion (8,523 records)",
+        "Data Cleaning & Missing Value Imputation (Pandas)",
+        "Feature Engineering (Outlet Age, Item Categorization)",
+        "Statistical Distribution & Correlation Analysis",
+        "Matplotlib & Seaborn Chart Generation",
+        "Executive Strategy Recommendations"
+      ],
+      challenges: [
+        "Handled inconsistent categorical labels ('LF', 'low fat', 'reg') by implementing normalized standardization rules.",
+        "Discovered that Tier 3 cities drove the highest outlet sales volume despite lower individual item visibility.",
+        "Constructed comparative subplots displaying outlet establishment year trends and fat-content pricing distributions."
+      ],
+      stack: {
+        "Data Manipulation": "Python 3.10+, Pandas, NumPy",
+        "Visualization": "Matplotlib, Seaborn",
+        "Environment": "Jupyter Notebook / VS Code",
+        "Repository": "github.com/nidhi713/Blinkit-Sales-Analysis-Python"
+      }
+    }
+  },
+  {
     id: "mind-wandering-detection",
     title: "Vision-Based Mind Wandering Detection",
     category: "Computer Vision & Deep Learning",
@@ -144,187 +192,13 @@ export const projects = [
         "Repository": "github.com/nidhi713/Vision-based-mind-wandering-detection-"
       }
     }
-  },
-  {
-    id: "agentic-workflow-automation",
-    title: "Agentic Workflow Automation Platform",
-    summary: "Enterprise autonomous workflow orchestrator leveraging LangChain and FastAPI to coordinate multi-step reasoning.",
-    description:
-      "Enterprise autonomous workflow orchestrator leveraging LangChain and FastAPI to coordinate multi-step reasoning, external tool execution, and dynamic context caching with real-time UI monitoring.",
-    highlights: [
-      "Multi-step reasoning with ReAct agent loops",
-      "Tool registry with sandboxed execution",
-      "Sub-150ms execution with Redis context caching"
-    ],
-    tags: ["Python", "FastAPI", "LangChain", "React"],
-    category: "Agentic AI",
-    liveUrl: "https://github.com/nidhi713",
-    githubUrl: "https://github.com/nidhi713",
-    image: null,
-    color: "purple",
-    featured: true,
-    year: "2024",
-    metrics: ["10k+ daily tool calls", "99.4% task completion", "Sub-150ms execution"],
-    architecture: {
-      overview: "Autonomous agent pipeline employing ReAct (Reason + Act) loops with external tool calling and state persistence.",
-      flow: [
-        "User Intent Extraction",
-        "FastAPI Gateway & Auth",
-        "LangChain Orchestrator",
-        "Tool Registry & Execution",
-        "Context Window Caching",
-        "Streaming Response"
-      ],
-      challenges: [
-        "Reduced tool execution hallucination rate from 14.2% to <0.6% using Pydantic schema validation.",
-        "Implemented Redis semantic caching layer, dropping average agent token spend by 38% on repeated queries.",
-        "Engineered real-time server-sent events (SSE) pipeline enabling token-by-token streaming to the React dashboard."
-      ],
-      stack: {
-        "Core Framework": "LangChain, FastAPI, Python 3.11",
-        "Frontend": "React, Tailwind CSS, Lucide",
-        "Caching & State": "Redis, PostgreSQL",
-        "Deployment": "Docker, AWS ECS"
-      }
-    }
-  },
-  {
-    id: "rag-retrieval-qa",
-    title: "RAG-based Knowledge Retrieval & QA System",
-    summary: "Hybrid search retrieval engine combining dense vector embeddings with sparse BM25 indexing via Qdrant.",
-    description:
-      "Enterprise hybrid search retrieval engine combining dense vector embeddings with sparse BM25 indexing via Qdrant, delivering high-precision contextual question answering over complex document corpora.",
-    highlights: [
-      "Dense embeddings + sparse BM25 hybrid search",
-      "Cross-encoder re-ranking with Cohere",
-      "94.8% retrieval recall across 500k+ docs"
-    ],
-    tags: ["Python", "LlamaIndex", "Qdrant", "Streamlit"],
-    category: "RAG & LLMs",
-    liveUrl: "https://github.com/nidhi713",
-    githubUrl: "https://github.com/nidhi713",
-    image: null,
-    color: "pink",
-    featured: true,
-    year: "2024",
-    metrics: ["94.8% retrieval recall", "500k+ docs indexed", "2.1s avg response"],
-    architecture: {
-      overview: "Hybrid retrieval augmented generation (RAG) system with re-ranking and reciprocal rank fusion (RRF).",
-      flow: [
-        "Document Ingestion & Chunking",
-        "Embedding Generation (OpenAI)",
-        "Qdrant Vector DB & BM25",
-        "Cross-Encoder Re-Ranking",
-        "Context Synthesis via LLM",
-        "Streamlit Client"
-      ],
-      challenges: [
-        "Solved 'lost in the middle' context degradation by implementing hierarchical recursive character chunking.",
-        "Incorporated Cohere Re-ranker to boost Top-3 recall accuracy from 81% to 94.8% across 500k technical documents.",
-        "Integrated metadata filtering allowing role-based access control (RBAC) at the embedding retrieval layer."
-      ],
-      stack: {
-        "RAG Orchestration": "LlamaIndex, LangChain",
-        "Vector Engine": "Qdrant (HNSW index + BM25)",
-        "Models": "OpenAI text-embedding-3-large, GPT-4o",
-        "Interface": "Streamlit, Python"
-      }
-    }
-  },
-  {
-    id: "realtime-ml-pipeline",
-    title: "Real-Time Data Analytics & ML Pipeline",
-    summary: "End-to-end predictive analytics pipeline processing continuous event streams feeding Tableau BI dashboards.",
-    description:
-      "End-to-end predictive analytics pipeline processing continuous event streams, executing automated feature engineering, and feeding interactive Tableau performance dashboards.",
-    highlights: [
-      "1M+ records processed hourly with zero loss",
-      "Automated feature engineering & drift monitoring",
-      "Live executive business intelligence dashboards"
-    ],
-    tags: ["Python", "SQL", "Tableau", "Scikit-Learn"],
-    category: "ML & Analytics",
-    liveUrl: "https://github.com/nidhi713",
-    githubUrl: "https://github.com/nidhi713",
-    image: null,
-    color: "green",
-    featured: false,
-    year: "2024",
-    metrics: ["1M+ records processed/hr", "0.91 AUC-ROC score", "Live executive BI"],
-    architecture: {
-      overview: "High-throughput stream processing and machine learning feature store feeding executive intelligence dashboards.",
-      flow: [
-        "Kafka Event Stream",
-        "Feature Engineering (Pandas / NumPy)",
-        "Model Inference (Scikit-Learn)",
-        "MySQL Analytical Data Mart",
-        "Tableau Automated Refresh",
-        "Alerting Engine"
-      ],
-      challenges: [
-        "Automated continuous drift detection flagging feature distribution changes before production degradation.",
-        "Optimized MySQL complex aggregation queries with covering indexes, slashing report query times by 74%.",
-        "Engineered reliable fallback imputations for missing stream telemetry data ensuring 99.9% pipeline uptime."
-      ],
-      stack: {
-        "Data & ML": "Python, Scikit-Learn, Pandas, NumPy",
-        "Storage": "MySQL, Redis",
-        "Visualization": "Tableau Desktop / Server",
-        "ETL Scheduling": "Apache Airflow, Docker"
-      }
-    }
-  },
-  {
-    id: "multi-agent-orchestrator",
-    title: "Autonomous Multi-Agent Task Orchestrator",
-    summary: "Collaborative multi-agent framework built with AutoGen and OpenAI API for complex software tasks.",
-    description:
-      "Collaborative multi-agent framework built with AutoGen and OpenAI API, enabling specialized subagents (researcher, coder, reviewer) to collaboratively break down and execute complex software workflows.",
-    highlights: [
-      "Collaborative researcher, coder & reviewer personas",
-      "Isolated sandboxed code runner in Docker",
-      "3x speedup vs standard single-prompt LLM"
-    ],
-    tags: ["Python", "AutoGen", "OpenAI API", "Next.js"],
-    category: "Agentic AI",
-    liveUrl: "https://github.com/nidhi713",
-    githubUrl: "https://github.com/nidhi713",
-    image: null,
-    color: "cyan",
-    featured: true,
-    year: "2024",
-    metrics: ["3x speedup vs single LLM", "Zero-shot tool use", "Self-healing execution"],
-    architecture: {
-      overview: "Hierarchical multi-agent network with specialized conversational personas and iterative feedback critique loops.",
-      flow: [
-        "Task Dispatcher",
-        "Researcher Agent",
-        "Coder Agent",
-        "Static Linter & Runner",
-        "Reviewer Critic Agent",
-        "Synthesis & Verification"
-      ],
-      challenges: [
-        "Eliminated infinite conversational deadlocks between subagents via deterministic state graphs and turn caps.",
-        "Built isolated Docker execution sandbox preventing untrusted code execution from breaching host environment.",
-        "Achieved 3x faster task execution by parallelizing independent research and implementation sub-tasks."
-      ],
-      stack: {
-        "Agent Framework": "Microsoft AutoGen, LangGraph",
-        "Inference": "OpenAI GPT-4o, Claude 3.5 Sonnet",
-        "Sandbox": "Docker Python API",
-        "Web Interface": "Next.js 14, Tailwind CSS"
-      }
-    }
   }
 ];
 
 export const categories = [
   "All",
-  "Data Analytics & Visualization",
+  "Generative AI & Agro-Meteorology",
   "Agentic AI & Data Analytics",
-  "Computer Vision & Deep Learning",
-  "Agentic AI",
-  "RAG & LLMs",
-  "ML & Analytics"
+  "Data Analytics & Visualization",
+  "Computer Vision & Deep Learning"
 ];

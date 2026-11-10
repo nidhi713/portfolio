@@ -396,16 +396,7 @@ function ArchitectureModal({ project, onClose }) {
             Nidhi Kumari · {project.category} Architecture
           </div>
           <div className="flex items-center gap-2 w-full sm:w-auto">
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-semibold text-white/70 hover:text-white bg-white/[0.04] border border-white/[0.08] hover:border-white/20 transition-all"
-            >
-              <Github size={14} />
-              View Source
-            </a>
-            {project.liveUrl ? (
+            {project.liveUrl && (
               <a
                 href={project.liveUrl}
                 target="_blank"
@@ -415,17 +406,16 @@ function ArchitectureModal({ project, onClose }) {
                 <ExternalLink size={14} />
                 Explore Demo
               </a>
-            ) : (
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl text-xs font-semibold text-white bg-gradient-to-r from-[#00d4ff] to-[#7c3aed] shadow-[0_0_16px_rgba(0,212,255,0.3)] hover:scale-105 transition-all"
-              >
-                <Github size={14} />
-                Open GitHub Repo
-              </a>
             )}
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-semibold text-white/80 hover:text-white bg-white/[0.06] border border-white/[0.1] hover:border-white/20 transition-all"
+            >
+              <Github size={14} />
+              Open GitHub Repo
+            </a>
           </div>
         </div>
       </div>
