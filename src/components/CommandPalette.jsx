@@ -14,12 +14,12 @@ const navActions = [
 ]
 
 const aiResponses = {
-  about: "Nidhi Kumari is an Agentic AI Engineer & Systems Developer specializing in multi-agent orchestration, RAG architectures, and scalable data intelligence pipelines.",
+  about: "Nidhi Kumari is an Agentic AI Engineer & Systems Developer specializing in multi-agent orchestration, RAG architectures, computer vision, and scalable data intelligence pipelines.",
   roles: "Primary roles: Agentic AI Engineer, LLM & RAG Application Developer, Machine Learning & Data Scientist, and Generative AI Systems Developer.",
-  skills: "Key Stack: LangChain, LlamaIndex, Agentic Workflows, Qdrant, PyTorch, Scikit-Learn, Python, FastAPI, React, Next.js, Docker, MySQL, and Tableau.",
-  projects: "Featured AI Systems: 1) Agentic Workflow Automation Platform, 2) RAG-based Knowledge QA, 3) Real-Time Data Analytics Pipeline, 4) Autonomous Multi-Agent Orchestrator.",
+  skills: "Key Stack: LangChain, LlamaIndex, Agentic Workflows, Qdrant, PyTorch, Scikit-Learn, Python, Pandas, NumPy, OpenCV, FastAPI, React, Next.js, Docker, MySQL, and Tableau.",
+  projects: "Featured Systems: 1) Blinkit Sales & Performance Analysis, 2) AI-Powered Data Analyst Agent (with live video demo), 3) Vision-Based Mind Wandering Detection, 4) Agentic Workflow Automation Platform, 5) RAG-based Knowledge QA, 6) Real-Time Data Analytics Pipeline, 7) Autonomous Multi-Agent Orchestrator.",
   certifications: "Verified Specializations: Deep Learning Specialization (DeepLearning.AI / Andrew Ng), LangChain for LLM Application Development (Harrison Chase), Machine Learning (IBM / Coursera), Computer Vision (OpenCV University).",
-  contact: "Email: nidhitiwaryy011@gmail.com | Available for global opportunities, consulting, and engineering leadership.",
+  contact: "Email: nidhitiwaryy011@gmail.com | LinkedIn: https://www.linkedin.com/in/nidhi-kumari-6b0331308/ | GitHub: https://github.com/nidhi713",
   resume: "Downloading Nidhi Kumari's Resume...",
 }
 
@@ -90,7 +90,7 @@ export default function CommandPalette({ isOpen, onClose }) {
     } else if (aiResponses[cmd]) {
       addTerminalEntry('agent', aiResponses[cmd])
       if (cmd === 'resume') {
-        window.open('/resume.pdf', '_blank')
+        window.open('/nidhi_resume.pdf', '_blank')
       }
     } else {
       addTerminalEntry(
@@ -204,8 +204,10 @@ export default function CommandPalette({ isOpen, onClose }) {
 
           {/* Download Resume Action */}
           <a
-            href="/resume.pdf"
-            download
+            href="/nidhi_resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            download="Nidhi_Kumari_Resume.pdf"
             onClick={() => onClose(false)}
             className="w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs text-white/70 hover:text-white hover:bg-white/[0.05] transition-all group"
           >
@@ -213,7 +215,7 @@ export default function CommandPalette({ isOpen, onClose }) {
               <div className="w-6 h-6 rounded-md bg-[#7c3aed]/10 border border-[#7c3aed]/20 flex items-center justify-center text-[#a78bfa]">
                 <FileText size={12} />
               </div>
-              <span>Download Nidhi Kumari Resume</span>
+              <span>Download Nidhi Kumari Resume (PDF)</span>
             </div>
             <ExternalLink size={12} className="text-white/30 group-hover:text-white transition-colors" />
           </a>

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Download } from 'lucide-react'
 
 const navItems = [
   { label: 'About', href: '#about' },
@@ -34,11 +34,10 @@ export default function Navbar({ onOpenPalette }) {
   return (
     <>
       <nav
-        className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-          scrolled
+        className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${scrolled
             ? 'py-3 bg-[#0a0a0c]/80 backdrop-blur-xl border-b border-white/[0.06] shadow-[0_4px_24px_rgba(0,0,0,0.4)]'
             : 'py-5 bg-transparent'
-        }`}
+          }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
@@ -57,11 +56,10 @@ export default function Navbar({ onOpenPalette }) {
               <a
                 key={item.href}
                 href={item.href}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                  activeSection === item.href.replace('#', '')
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${activeSection === item.href.replace('#', '')
                     ? 'text-[#00d4ff] bg-[#00d4ff]/10'
                     : 'text-white/50 hover:text-white hover:bg-white/[0.05]'
-                }`}
+                  }`}
               >
                 {item.label}
               </a>
@@ -77,8 +75,19 @@ export default function Navbar({ onOpenPalette }) {
               </button>
             )}
             <a
+              href="/nidhi_resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download="Nidhi_Kumari_Resume.pdf"
+              className="px-3.5 py-1.5 rounded-lg border border-white/[0.12] bg-white/[0.04] text-xs font-semibold text-white/80 hover:text-white hover:border-[#00d4ff]/40 hover:bg-white/[0.08] transition-all ml-1 flex items-center gap-1.5"
+              title="Download CV / Resume"
+            >
+              <Download size={13} className="text-[#00d4ff]" />
+              <span>Resume</span>
+            </a>
+            <a
               href="#contact"
-              className="ml-3 px-5 py-2 rounded-xl text-sm font-semibold bg-gradient-to-r from-[#00d4ff] to-[#7c3aed] text-white shadow-[0_0_16px_rgba(0,212,255,0.25)] hover:shadow-[0_0_24px_rgba(0,212,255,0.4)] hover:scale-105 transition-all duration-200"
+              className="ml-2 px-5 py-2 rounded-xl text-sm font-semibold bg-gradient-to-r from-[#00d4ff] to-[#7c3aed] text-white shadow-[0_0_16px_rgba(0,212,255,0.25)] hover:shadow-[0_0_24px_rgba(0,212,255,0.4)] hover:scale-105 transition-all duration-200"
             >
               Hire Me
             </a>
@@ -96,9 +105,8 @@ export default function Navbar({ onOpenPalette }) {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-x-0 top-0 z-40 bg-[#0a0a0c]/95 backdrop-blur-2xl border-b border-white/[0.08] transition-all duration-300 md:hidden ${
-          mobileOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'
-        }`}
+        className={`fixed inset-x-0 top-0 z-40 bg-[#0a0a0c]/95 backdrop-blur-2xl border-b border-white/[0.08] transition-all duration-300 md:hidden ${mobileOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'
+          }`}
       >
         <div className="pt-20 pb-6 px-6 flex flex-col gap-1">
           {navItems.map((item) => (
@@ -112,9 +120,20 @@ export default function Navbar({ onOpenPalette }) {
             </a>
           ))}
           <a
+            href="/nidhi_resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            download="Nidhi_Kumari_Resume.pdf"
+            onClick={() => setMobileOpen(false)}
+            className="px-4 py-3 rounded-xl text-white/80 hover:text-white hover:bg-white/[0.05] transition-all text-sm font-medium flex items-center gap-2 border border-white/[0.08]"
+          >
+            <Download size={15} className="text-[#00d4ff]" />
+            <span>Download CV / Resume</span>
+          </a>
+          <a
             href="#contact"
             onClick={() => setMobileOpen(false)}
-            className="mt-3 px-4 py-3 rounded-xl text-center text-sm font-semibold bg-gradient-to-r from-[#00d4ff] to-[#7c3aed] text-white"
+            className="mt-2 px-4 py-3 rounded-xl text-center text-sm font-semibold bg-gradient-to-r from-[#00d4ff] to-[#7c3aed] text-white"
           >
             Hire Me
           </a>

@@ -105,12 +105,15 @@ export default function Hero() {
             Contact Me
           </a>
           <a
-            href="/resume.pdf"
-            download
-            className="btn-secondary"
+            href="/nidhi_resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            download="Nidhi_Kumari_Resume.pdf"
+            className="btn-secondary group"
+            title="Download Nidhi Kumari's Resume (PDF)"
           >
-            <Download size={15} />
-            Resume
+            <Download size={15} className="group-hover:-translate-y-0.5 transition-transform" />
+            Download CV / Resume
           </a>
         </div>
 

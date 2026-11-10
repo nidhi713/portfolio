@@ -15,7 +15,8 @@
 | **Hero** | [`src/components/Hero.jsx`](file:///c:/Users/dell/my-portfolio-site/my-portfolio-site/src/components/Hero.jsx) | Typewriter role loop, 4 credibility stats, multi-layer ambient glows, direct CTAs, and verified social links. |
 | **Projects** | [`src/components/Projects.jsx`](file:///c:/Users/dell/my-portfolio-site/my-portfolio-site/src/components/Projects.jsx) | Category-filtered showcase (Agentic AI, RAG & LLMs, ML & Analytics, Data Analytics & Visualization). Supports inline MP4 video execution demo and custom chart image preview modals. |
 | **Skills** | [`src/components/Skills.jsx`](file:///c:/Users/dell/my-portfolio-site/my-portfolio-site/src/components/Skills.jsx) | Categorized matrix: AI & GenAI, Data Science & ML, Web & Cloud. Animated percentage bars. |
-| **Experience** | [`src/components/Experience.jsx`](file:///c:/Users/dell/my-portfolio-site/my-portfolio-site/src/components/Experience.jsx) | Vertical timeline with glowing markers, quantified impact bullet points, and technology badges. |
+| **Experience** | [`src/components/Experience.jsx`](file:///c:/Users/dell/my-portfolio-site/my-portfolio-site/src/components/Experience.jsx) | Verified timeline: AI Intern (Megha Mitra Project @ BMSK Patna), AI & Data Science Intern (Grade A @ C-DAC Patna), and Agentic Systems Developer. |
+| **Certifications** | [`src/components/Certifications.jsx`](file:///c:/Users/dell/my-portfolio-site/my-portfolio-site/src/components/Certifications.jsx) | Verified credentials: C-DAC Patna (Grade A), IIT Roorkee NPTEL Elite Topper (90%), ExcelR Data Analysis, and 200+ Solved DSA benchmark. Includes local file preview and modal viewer. |
 | **Contact** | [`src/components/Contact.jsx`](file:///c:/Users/dell/my-portfolio-site/my-portfolio-site/src/components/Contact.jsx) | Production-ready live fetch API submission, validation state engine, direct channels, and availability badge. |
 | **Footer** | [`src/components/Footer.jsx`](file:///c:/Users/dell/my-portfolio-site/my-portfolio-site/src/components/Footer.jsx) | Dynamic copyright year, verified profile URLs, smooth back-to-top scroll. |
 
@@ -37,6 +38,16 @@ Configured with 7 enterprise AI/ML, Agentic, Computer Vision & Data Analytics en
 1. **AI & GenAI**: LangChain (95%), LlamaIndex (92%), Agentic Workflows (96%), RAG Architecture (94%), OpenAI / Gemini APIs (95%), Hugging Face (88%)
 2. **Data Science & ML**: Python (98%), PyTorch (88%), Scikit-Learn (92%), Pandas & NumPy (95%), MySQL (89%), Tableau (85%)
 3. **Web & Cloud**: React (92%), Node.js (88%), FastAPI (94%), Tailwind CSS (93%), Docker (87%), Git / GitHub (95%), Cloud Deployment (90%)
+
+### 3. Certifications & Achievements (`src/data/certifications.js`)
+1. **AI & Data Science Internship Certificate**: C-DAC Patna · **Grade A** (Dec 2025 – Jan 2026) · Direct Certificate View (`/cdac certificate.png`)
+2. **Fundamentals of Object-Oriented Programming**: IIT Roorkee / NPTEL · **Elite Certificate + Top 5% Topper (90%)** (Jan – Apr 2025) · Direct PDF View (`/Fundamentals of Object Oriented Programming (1).pdf`)
+3. **Data Analysis Certification**: ExcelR · Certified Data Analyst (Sep 2025)
+4. **Key Problem Solving Benchmark**: 200+ Solved DSA Problems in C++ and Python
+
+### 4. Resume Document Asset
+- Direct file: `public/nidhi_resume.pdf`
+- Wireup: Hero CTA button (`download="Nidhi_Kumari_Resume.pdf"`), Navbar header button, and Command Palette quick action.
 
 ---
 
