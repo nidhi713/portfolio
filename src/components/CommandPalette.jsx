@@ -9,6 +9,7 @@ const navActions = [
   { label: 'Explore AI Projects', href: '#projects', category: 'Navigation' },
   { label: 'Inspect Skills Arsenal', href: '#skills', category: 'Navigation' },
   { label: 'View Career Experience', href: '#experience', category: 'Navigation' },
+  { label: 'View Verified Certifications', href: '#certifications', category: 'Navigation' },
   { label: 'Send Direct Message', href: '#contact', category: 'Navigation' },
 ]
 
@@ -17,6 +18,7 @@ const aiResponses = {
   roles: "Primary roles: Agentic AI Engineer, LLM & RAG Application Developer, Machine Learning & Data Scientist, and Generative AI Systems Developer.",
   skills: "Key Stack: LangChain, LlamaIndex, Agentic Workflows, Qdrant, PyTorch, Scikit-Learn, Python, FastAPI, React, Next.js, Docker, MySQL, and Tableau.",
   projects: "Featured AI Systems: 1) Agentic Workflow Automation Platform, 2) RAG-based Knowledge QA, 3) Real-Time Data Analytics Pipeline, 4) Autonomous Multi-Agent Orchestrator.",
+  certifications: "Verified Specializations: Deep Learning Specialization (DeepLearning.AI / Andrew Ng), LangChain for LLM Application Development (Harrison Chase), Machine Learning (IBM / Coursera), Computer Vision (OpenCV University).",
   contact: "Email: nidhitiwaryy011@gmail.com | Available for global opportunities, consulting, and engineering leadership.",
   resume: "Downloading Nidhi Kumari's Resume...",
 }

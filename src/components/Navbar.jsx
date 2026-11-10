@@ -6,6 +6,7 @@ const navItems = [
   { label: 'Projects', href: '#projects' },
   { label: 'Skills', href: '#skills' },
   { label: 'Experience', href: '#experience' },
+  { label: 'Certifications', href: '#certifications' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -17,7 +18,7 @@ export default function Navbar({ onOpenPalette }) {
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 20)
-      const sections = ['about', 'projects', 'skills', 'experience', 'contact']
+      const sections = ['about', 'projects', 'skills', 'experience', 'certifications', 'contact']
       for (const id of sections.reverse()) {
         const el = document.getElementById(id)
         if (el && window.scrollY >= el.offsetTop - 120) {
