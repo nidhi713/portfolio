@@ -9,7 +9,7 @@ const navItems = [
   { label: 'Contact', href: '#contact' },
 ]
 
-export default function Navbar() {
+export default function Navbar({ onOpenPalette }) {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('')
@@ -65,6 +65,16 @@ export default function Navbar() {
                 {item.label}
               </a>
             ))}
+            {onOpenPalette && (
+              <button
+                onClick={() => onOpenPalette(true)}
+                className="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/[0.08] bg-white/[0.03] text-xs text-white/50 hover:text-white hover:border-[#00d4ff]/30 hover:bg-white/[0.06] transition-all ml-1"
+                title="Open Command Palette (Ctrl+K)"
+              >
+                <span className="font-mono text-[10px] bg-white/[0.08] px-1 py-0.5 rounded">⌘K</span>
+                <span className="text-[11px] font-mono">Agent</span>
+              </button>
+            )}
             <a
               href="#contact"
               className="ml-3 px-5 py-2 rounded-xl text-sm font-semibold bg-gradient-to-r from-[#00d4ff] to-[#7c3aed] text-white shadow-[0_0_16px_rgba(0,212,255,0.25)] hover:shadow-[0_0_24px_rgba(0,212,255,0.4)] hover:scale-105 transition-all duration-200"

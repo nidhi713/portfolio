@@ -1,6 +1,10 @@
-# 🚀 Modern Developer Portfolio
+# 🚀 Nidhi Kumari — AI & Intelligent Systems Portfolio
 
-A high-performance, dark-mode personal developer portfolio built with **React**, **Vite**, and **Tailwind CSS**. Designed for full-stack engineers and architects to showcase deployed applications, core technical skills, and client satisfaction metrics.
+A high-performance, dark-mode personal developer portfolio for **Nidhi Kumari**, an **Agentic AI & Systems Engineer**. Built with **React 18**, **Vite 5**, and **Tailwind CSS 3** to showcase autonomous multi-agent workflows, enterprise RAG applications, machine learning systems, and data pipelines.
+
+- **GitHub:** [https://github.com/nidhi713](https://github.com/nidhi713)
+- **LinkedIn:** [https://www.linkedin.com/in/nidhi-kumari-6b0331308/](https://www.linkedin.com/in/nidhi-kumari-6b0331308/)
+- **Email:** [nidhitiwaryy011@gmail.com](mailto:nidhitiwaryy011@gmail.com)
 
 ![Vite](https://img.shields.io/badge/Vite-5.x-646CFF?style=flat-square&logo=vite&logoColor=white)
 ![React](https://img.shields.io/badge/React-18.x-61DAFB?style=flat-square&logo=react&logoColor=black)

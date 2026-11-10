@@ -39,9 +39,9 @@ Configured with 4 enterprise AI/ML entries:
 
 ## 🌐 Verified Profile Links
 
-- **GitHub:** [https://github.com](https://github.com)
-- **LinkedIn:** [https://linkedin.com](https://linkedin.com)
-- **Email:** [mailto:contact@nidhikumari.dev](mailto:contact@nidhikumari.dev)
+- **GitHub:** [https://github.com/nidhi713](https://github.com/nidhi713)
+- **LinkedIn:** [https://www.linkedin.com/in/nidhi-kumari-6b0331308/](https://www.linkedin.com/in/nidhi-kumari-6b0331308/)
+- **Email:** [mailto:nidhitiwaryy011@gmail.com](mailto:nidhitiwaryy011@gmail.com)
 
 ---
 

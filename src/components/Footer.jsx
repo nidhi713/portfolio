@@ -20,9 +20,9 @@ export default function Footer() {
         {/* Social */}
         <div className="flex items-center gap-2">
           {[
-            { icon: Github, href: 'https://github.com', label: 'GitHub' },
-            { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-            { icon: Mail, href: 'mailto:contact@nidhikumari.dev', label: 'Email' },
+            { icon: Github, href: 'https://github.com/nidhi713', label: 'GitHub' },
+            { icon: Linkedin, href: 'https://www.linkedin.com/in/nidhi-kumari-6b0331308/', label: 'LinkedIn' },
+            { icon: Mail, href: 'mailto:nidhitiwaryy011@gmail.com', label: 'Email' },
           ].map(({ icon: Icon, href, label }) => (
             <a
               key={label}

@@ -8,22 +8,22 @@ const socials = [
   {
     icon: Github,
     label: 'GitHub',
-    handle: 'github.com',
-    href: 'https://github.com',
+    handle: '@nidhi713',
+    href: 'https://github.com/nidhi713',
     color: '#ffffff',
   },
   {
     icon: Linkedin,
     label: 'LinkedIn',
-    handle: 'linkedin.com',
-    href: 'https://linkedin.com',
+    handle: 'in/nidhi-kumari',
+    href: 'https://www.linkedin.com/in/nidhi-kumari-6b0331308/',
     color: '#0077b5',
   },
   {
     icon: Mail,
     label: 'Email',
-    handle: 'contact@nidhikumari.dev',
-    href: 'mailto:contact@nidhikumari.dev',
+    handle: 'nidhitiwaryy011@gmail.com',
+    href: 'mailto:nidhitiwaryy011@gmail.com',
     color: '#00d4ff',
   },
 ]
@@ -117,7 +117,7 @@ export default function Contact() {
       console.error('Contact submission error:', err)
       setStatus('error')
       setServerError(
-        'Unable to complete submission right now. You can also email directly at contact@nidhikumari.dev'
+        'Unable to complete submission right now. You can also email directly at nidhitiwaryy011@gmail.com'
       )
     }
   }

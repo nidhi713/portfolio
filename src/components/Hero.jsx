@@ -117,9 +117,9 @@ export default function Hero() {
         {/* Social Links */}
         <div className="flex items-center justify-center gap-3 mb-20 animate-fade-up animate-delay-500">
           {[
-            { icon: Github, href: 'https://github.com', label: 'GitHub' },
-            { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-            { icon: Mail, href: 'mailto:contact@nidhikumari.dev', label: 'Email' },
+            { icon: Github, href: 'https://github.com/nidhi713', label: 'GitHub' },
+            { icon: Linkedin, href: 'https://www.linkedin.com/in/nidhi-kumari-6b0331308/', label: 'LinkedIn' },
+            { icon: Mail, href: 'mailto:nidhitiwaryy011@gmail.com', label: 'Email' },
           ].map(({ icon: Icon, href, label }) => (
             <a
               key={label}

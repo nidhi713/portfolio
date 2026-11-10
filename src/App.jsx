@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Projects from './components/Projects'
@@ -5,8 +6,11 @@ import Skills from './components/Skills'
 import Experience from './components/Experience'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import CommandPalette from './components/CommandPalette'
 
 export default function App() {
+  const [paletteOpen, setPaletteOpen] = useState(false)
+
   return (
     <div className="relative min-h-screen bg-[#0a0a0c] text-white overflow-x-hidden">
       {/* Subtle noise texture overlay */}
@@ -17,7 +21,7 @@ export default function App() {
         }}
       />
 
-      <Navbar />
+      <Navbar onOpenPalette={setPaletteOpen} />
       <main>
         <Hero />
         <Projects />
@@ -26,6 +30,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <CommandPalette isOpen={paletteOpen} onClose={setPaletteOpen} />
     </div>
   )
 }
