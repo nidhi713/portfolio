@@ -1,36 +1,29 @@
 import { useState, useRef, useEffect } from 'react'
 import {
-  Mail, MessageSquare, Send, Github, Linkedin, Twitter,
-  CheckCircle2, AlertCircle, Loader2, MapPin, Coffee,
+  Mail, MessageSquare, Send, Github, Linkedin,
+  CheckCircle2, AlertCircle, Loader2, MapPin, Coffee, RefreshCw,
 } from 'lucide-react'
 
 const socials = [
   {
     icon: Github,
     label: 'GitHub',
-    handle: '@alexcarter',
+    handle: 'github.com',
     href: 'https://github.com',
     color: '#ffffff',
   },
   {
     icon: Linkedin,
     label: 'LinkedIn',
-    handle: 'in/alexcarter',
+    handle: 'linkedin.com',
     href: 'https://linkedin.com',
     color: '#0077b5',
   },
   {
-    icon: Twitter,
-    label: 'Twitter / X',
-    handle: '@alexcarter_dev',
-    href: 'https://twitter.com',
-    color: '#1da1f2',
-  },
-  {
     icon: Mail,
     label: 'Email',
-    handle: 'alex@example.com',
-    href: 'mailto:alex@example.com',
+    handle: 'contact@nidhikumari.dev',
+    href: 'mailto:contact@nidhikumari.dev',
     color: '#00d4ff',
   },
 ]
@@ -49,6 +42,7 @@ export default function Contact() {
   const [errors, setErrors] = useState({})
   const [touched, setTouched] = useState({})
   const [status, setStatus] = useState('idle') // idle | sending | success | error
+  const [serverError, setServerError] = useState('')
   const [visible, setVisible] = useState(false)
   const ref = useRef(null)
 
@@ -86,12 +80,46 @@ export default function Contact() {
     if (Object.keys(newErrors).length > 0) return
 
     setStatus('sending')
-    // Simulate async send
-    await new Promise((r) => setTimeout(r, 1800))
-    setStatus('success')
-    setForm({ name: '', email: '', subject: '', message: '' })
-    setTouched({})
-    setTimeout(() => setStatus('idle'), 5000)
+    setServerError('')
+
+    try {
+      // Production endpoint pattern for Web3Forms or Formspree
+      const endpoint = import.meta.env.VITE_CONTACT_ENDPOINT || 'https://api.web3forms.com/submit'
+      const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || 'demo-key-portfolio'
+
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: accessKey,
+          name: form.name.trim(),
+          email: form.email.trim(),
+          subject: form.subject.trim(),
+          message: form.message.trim(),
+          from_name: 'Nidhi Kumari Portfolio Contact',
+        }),
+      })
+
+      const data = await response.json().catch(() => ({}))
+
+      if (response.ok && data.success !== false) {
+        setStatus('success')
+        setForm({ name: '', email: '', subject: '', message: '' })
+        setTouched({})
+        setTimeout(() => setStatus('idle'), 6000)
+      } else {
+        throw new Error(data.message || 'Server returned an unconfirmed response.')
+      }
+    } catch (err) {
+      console.error('Contact submission error:', err)
+      setStatus('error')
+      setServerError(
+        'Unable to complete submission right now. You can also email directly at contact@nidhikumari.dev'
+      )
+    }
   }
 
   const fieldClass = (name) =>
@@ -114,10 +142,10 @@ export default function Contact() {
             <span>✉️</span> Contact
           </div>
           <h2 className="text-4xl sm:text-5xl font-black text-white mb-4">
-            Let's <span className="bg-gradient-to-r from-[#00d4ff] to-[#ec4899] bg-clip-text text-transparent">Build Together</span>
+            Let's <span className="bg-gradient-to-r from-[#00d4ff] to-[#ec4899] bg-clip-text text-transparent">Connect</span>
           </h2>
           <p className="text-white/40 max-w-xl mx-auto text-base">
-            Have a project in mind or want to collaborate? I'm available for freelance, contract, and full-time roles.
+            Interested in building autonomous AI agents, enterprise LLM solutions, or data pipelines? Let's discuss your project.
           </p>
         </div>
 
@@ -131,11 +159,11 @@ export default function Contact() {
             <div className="glass-card p-5 border-[#10b981]/20 bg-[#10b981]/[0.03]">
               <div className="flex items-center gap-2 mb-3">
                 <span className="w-2 h-2 rounded-full bg-[#10b981] animate-ping" />
-                <span className="text-[#10b981] text-sm font-semibold">Currently Available</span>
+                <span className="text-[#10b981] text-sm font-semibold">Open for Roles & Consulting</span>
               </div>
               <div className="flex items-start gap-2 text-white/50 text-sm">
                 <MapPin size={14} className="mt-0.5 shrink-0" />
-                <span>Remote-first · UTC+5:30 · Open to relocation</span>
+                <span>Remote / Hybrid · Open to global opportunities</span>
               </div>
               <div className="flex items-start gap-2 text-white/50 text-sm mt-2">
                 <Coffee size={14} className="mt-0.5 shrink-0" />
@@ -179,16 +207,32 @@ export default function Contact() {
                   <CheckCircle2 size={32} className="text-[#10b981]" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2">Message Sent!</h3>
-                  <p className="text-white/40 text-sm">Thanks for reaching out. I'll get back to you within 24 hours.</p>
+                  <h3 className="text-xl font-bold text-white mb-2">Message Sent Successfully!</h3>
+                  <p className="text-white/40 text-sm max-w-sm mb-4">
+                    Thank you for reaching out. I will review your note and respond within 24 hours.
+                  </p>
+                  <button
+                    onClick={() => setStatus('idle')}
+                    className="btn-secondary text-xs"
+                  >
+                    <RefreshCw size={12} /> Send Another Message
+                  </button>
                 </div>
               </div>
             ) : (
               <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-5">
                 <div className="flex items-center gap-2 mb-1">
                   <MessageSquare size={16} className="text-[#00d4ff]" />
-                  <h3 className="font-bold text-white text-base">Send a Message</h3>
+                  <h3 className="font-bold text-white text-base">Send a Direct Message</h3>
                 </div>
+
+                {/* Error Banner if API submission fails */}
+                {status === 'error' && (
+                  <div className="p-3 rounded-xl bg-[#ef4444]/10 border border-[#ef4444]/30 flex items-start gap-2.5 text-xs text-[#ef4444]">
+                    <AlertCircle size={16} className="shrink-0 mt-0.5" />
+                    <span>{serverError}</span>
+                  </div>
+                )}
 
                 <div className="grid sm:grid-cols-2 gap-4">
                   {/* Name */}
@@ -202,7 +246,7 @@ export default function Contact() {
                       value={form.name}
                       onChange={handleChange}
                       onBlur={handleBlur}
-                      placeholder="Jane Smith"
+                      placeholder="Your Name"
                       className={fieldClass('name')}
                     />
                     {touched.name && errors.name && (
@@ -214,7 +258,7 @@ export default function Contact() {
                   {/* Email */}
                   <div>
                     <label className="block text-xs font-semibold text-white/40 mb-1.5 tracking-wide uppercase">
-                      Email *
+                      Email Address *
                     </label>
                     <input
                       type="email"
@@ -222,7 +266,7 @@ export default function Contact() {
                       value={form.email}
                       onChange={handleChange}
                       onBlur={handleBlur}
-                      placeholder="jane@company.com"
+                      placeholder="name@company.com"
                       className={fieldClass('email')}
                     />
                     {touched.email && errors.email && (
@@ -244,7 +288,7 @@ export default function Contact() {
                     value={form.subject}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    placeholder="Project inquiry / Collaboration..."
+                    placeholder="AI Agent Architecture / Consulting / Opportunity..."
                     className={fieldClass('subject')}
                   />
                   {touched.subject && errors.subject && (
@@ -265,7 +309,7 @@ export default function Contact() {
                     onChange={handleChange}
                     onBlur={handleBlur}
                     rows={5}
-                    placeholder="Tell me about your project, timeline, and budget..."
+                    placeholder="Tell me about your goals, technical requirements, and timeline..."
                     className={`${fieldClass('message')} resize-none`}
                   />
                   <div className="flex items-start justify-between mt-1">
@@ -291,7 +335,7 @@ export default function Contact() {
                   {status === 'sending' ? (
                     <>
                       <Loader2 size={16} className="animate-spin" />
-                      Sending...
+                      Submitting Message...
                     </>
                   ) : (
                     <>
@@ -308,4 +352,3 @@ export default function Contact() {
     </section>
   )
 }
-

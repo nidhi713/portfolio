@@ -5,6 +5,7 @@ const navItems = [
   { label: 'About', href: '#about' },
   { label: 'Projects', href: '#projects' },
   { label: 'Skills', href: '#skills' },
+  { label: 'Experience', href: '#experience' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -16,7 +17,7 @@ export default function Navbar() {
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 20)
-      const sections = ['about', 'projects', 'skills', 'contact']
+      const sections = ['about', 'projects', 'skills', 'experience', 'contact']
       for (const id of sections.reverse()) {
         const el = document.getElementById(id)
         if (el && window.scrollY >= el.offsetTop - 120) {
@@ -42,10 +43,10 @@ export default function Navbar() {
           {/* Logo */}
           <a href="#" className="flex items-center gap-2.5 group">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#00d4ff] to-[#7c3aed] flex items-center justify-center shadow-[0_0_16px_rgba(0,212,255,0.4)] group-hover:shadow-[0_0_24px_rgba(0,212,255,0.6)] transition-shadow duration-300">
-              <span className="text-white font-bold text-sm font-mono">AC</span>
+              <span className="text-white font-bold text-sm font-mono">NK</span>
             </div>
             <span className="font-bold text-white/90 text-sm tracking-wide group-hover:text-white transition-colors">
-              Alex Carter
+              Nidhi Kumari
             </span>
           </a>
 

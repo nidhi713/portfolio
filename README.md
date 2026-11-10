@@ -106,3 +106,4 @@ See the detailed component guide in [`COMPONENTS.md`](./COMPONENTS.md) for step-
 ## 📄 License
 
 This project is licensed under the MIT License - feel free to customize and use it for your own personal portfolio!
+

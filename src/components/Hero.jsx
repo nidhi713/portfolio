@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react'
-import { ArrowRight, Download, Github, Linkedin, Twitter, ChevronDown } from 'lucide-react'
+import { ArrowRight, Download, Github, Linkedin, Mail, ChevronDown } from 'lucide-react'
 
 const roles = [
-  'Full-Stack Engineer',
-  'UI/UX Architect',
-  'AI Integration Specialist',
-  'Open Source Contributor',
+  'Agentic AI Engineer',
+  'LLM & RAG Application Developer',
+  'Machine Learning & Data Scientist',
+  'Generative AI Systems Developer',
 ]
 
 export default function Hero() {
@@ -76,9 +76,9 @@ export default function Hero() {
 
         {/* Name */}
         <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight mb-6 animate-fade-up animate-delay-100">
-          <span className="text-white">Alex </span>
+          <span className="text-white">Nidhi </span>
           <span className="bg-gradient-to-r from-[#00d4ff] via-[#7c3aed] to-[#ec4899] bg-clip-text text-transparent">
-            Carter
+            Kumari
           </span>
         </h1>
 
@@ -92,8 +92,7 @@ export default function Hero() {
 
         {/* Tagline */}
         <p className="max-w-2xl mx-auto text-base sm:text-lg text-white/50 leading-relaxed mb-10 animate-fade-up animate-delay-300">
-          I build{' '}
-          <span className="text-white/80 font-medium">high-performance web products</span> that scale — from pixel-perfect interfaces to distributed backend systems, with a passion for AI-powered experiences.
+          Building Autonomous AI Agents & Intelligent Systems
         </p>
 
         {/* CTA Buttons */}
@@ -120,7 +119,7 @@ export default function Hero() {
           {[
             { icon: Github, href: 'https://github.com', label: 'GitHub' },
             { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-            { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
+            { icon: Mail, href: 'mailto:contact@nidhikumari.dev', label: 'Email' },
           ].map(({ icon: Icon, href, label }) => (
             <a
               key={label}

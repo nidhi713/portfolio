@@ -231,13 +231,13 @@ export default function Projects() {
         {/* Footer CTA */}
         <div className={`text-center mt-14 transition-all duration-700 delay-500 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <a
-            href="https://github.com/alexcarter"
+            href="https://github.com"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm text-white/40 hover:text-white/80 transition-colors group"
           >
             <Github size={16} />
-            See all 40+ projects on GitHub
+            Explore more repositories on GitHub
             <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
           </a>
         </div>

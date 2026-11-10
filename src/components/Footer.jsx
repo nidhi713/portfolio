@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter, Mail, ArrowUp } from 'lucide-react'
+import { Github, Linkedin, Mail, ArrowUp } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -8,9 +8,9 @@ export default function Footer() {
         <div className="flex flex-col items-center sm:items-start gap-1">
           <div className="flex items-center gap-2">
             <div className="w-6 h-6 rounded-md bg-gradient-to-br from-[#00d4ff] to-[#7c3aed] flex items-center justify-center">
-              <span className="text-white font-bold text-[9px] font-mono">AC</span>
+              <span className="text-white font-bold text-[9px] font-mono">NK</span>
             </div>
-            <span className="font-bold text-white/80 text-sm">Alex Carter</span>
+            <span className="font-bold text-white/80 text-sm">Nidhi Kumari</span>
           </div>
           <span className="text-xs text-white/30">
             © {new Date().getFullYear()} · Built with React + Vite + Tailwind
@@ -22,8 +22,7 @@ export default function Footer() {
           {[
             { icon: Github, href: 'https://github.com', label: 'GitHub' },
             { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-            { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
-            { icon: Mail, href: 'mailto:alex@example.com', label: 'Email' },
+            { icon: Mail, href: 'mailto:contact@nidhikumari.dev', label: 'Email' },
           ].map(({ icon: Icon, href, label }) => (
             <a
               key={label}

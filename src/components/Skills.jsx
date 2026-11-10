@@ -45,10 +45,10 @@ function SkillCategory({ title, items, color, visible, delay }) {
           className="w-8 h-8 rounded-lg flex items-center justify-center text-sm"
           style={{ background: color.bg, border: `1px solid ${color.border}` }}
         >
-          {title === 'Frontend' && '⚛️'}
-          {title === 'Backend' && '⚙️'}
-          {title === 'AI / ML' && '🤖'}
-          {title === 'Cloud / DevOps' && '☁️'}
+          {title === 'AI & GenAI' && '🤖'}
+          {title === 'Data Science & ML' && '📊'}
+          {title === 'Web & Cloud' && '☁️'}
+          {!['AI & GenAI', 'Data Science & ML', 'Web & Cloud'].includes(title) && '⚡'}
         </div>
         <h3 className="font-bold text-white text-sm">{title}</h3>
         <span
@@ -113,7 +113,7 @@ export default function Skills() {
         </div>
 
         {/* Grid */}
-        <div className="grid sm:grid-cols-2 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {Object.entries(skills).map(([category, items], i) => (
             <SkillCategory
               key={category}
