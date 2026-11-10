@@ -24,11 +24,12 @@
 ## 🛠️ Data Layers
 
 ### 1. Projects Store (`src/data/projects.js`)
-Configured with 4 enterprise AI/ML entries:
-1. **Agentic Workflow Automation Platform**: LangChain, FastAPI, React, Python
-2. **RAG-based Knowledge Retrieval & QA System**: LlamaIndex, Qdrant, Streamlit, Python
-3. **Real-Time Data Analytics & ML Pipeline**: Python, SQL, Tableau, Scikit-Learn
-4. **Autonomous Multi-Agent Task Orchestrator**: Python, AutoGen, OpenAI API, Next.js
+Configured with 5 enterprise AI/ML & Computer Vision entries:
+1. **Vision-Based Mind Wandering Detection**: Python, OpenCV, PyTorch / TensorFlow, Computer Vision, Facial Landmarks ([Repo](https://github.com/nidhi713/Vision-based-mind-wandering-detection-))
+2. **Agentic Workflow Automation Platform**: LangChain, FastAPI, React, Python
+3. **RAG-based Knowledge Retrieval & QA System**: LlamaIndex, Qdrant, Streamlit, Python
+4. **Real-Time Data Analytics & ML Pipeline**: Python, SQL, Tableau, Scikit-Learn
+5. **Autonomous Multi-Agent Task Orchestrator**: Python, AutoGen, OpenAI API, Next.js
 
 ### 2. Skills Matrix (`src/data/skills.js`)
 1. **AI & GenAI**: LangChain (95%), LlamaIndex (92%), Agentic Workflows (96%), RAG Architecture (94%), OpenAI / Gemini APIs (95%), Hugging Face (88%)
