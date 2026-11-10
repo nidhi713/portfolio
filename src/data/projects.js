@@ -1,5 +1,54 @@
 export const projects = [
   {
+    id: "blinkit-sales-analysis",
+    title: "Blinkit Sales & Performance Analysis",
+    category: "Data Analytics & Visualization",
+    summary: "Comprehensive end-to-end data analysis pipeline evaluating sales metrics, outlet performance, and consumer purchasing patterns.",
+    description: "Exploratory data analysis and visualization pipeline built to analyze sales performance, item type distributions, outlet size efficiency, and revenue drivers across various location tiers.",
+    highlights: [
+      "Statistical EDA across sales revenue, fat content, and outlet age",
+      "Item visibility and outlet size impact analysis",
+      "Rich visual dashboards displaying key business performance indicators (KPIs)"
+    ],
+    tags: [
+      "Python",
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "Seaborn",
+      "Data Analytics / EDA"
+    ],
+    liveUrl: "",
+    githubUrl: "https://github.com/nidhi713/Blinkit-Sales-Analysis-Python",
+    imageUrl: "https://raw.githubusercontent.com/nidhi713/Blinkit-Sales-Analysis-Python/main/Blinkit%20Project/images/outlet_size_sales.png",
+    featured: true,
+    color: "green",
+    year: "2024",
+    metrics: ["Statistical EDA", "Outlet Size & Location KPIs", "Custom Matplotlib Charts"],
+    architecture: {
+      overview: "Comprehensive exploratory data analysis and visualization workflow evaluating grocery retail telemetry, item visibility, and location tier revenue distribution.",
+      flow: [
+        "Raw Retail Dataset Ingestion (8,523 records)",
+        "Data Cleaning & Missing Value Imputation (Pandas)",
+        "Feature Engineering (Outlet Age, Item Categorization)",
+        "Statistical Distribution & Correlation Analysis",
+        "Matplotlib & Seaborn Chart Generation",
+        "Executive Strategy Recommendations"
+      ],
+      challenges: [
+        "Handled inconsistent categorical labels ('LF', 'low fat', 'reg') by implementing normalized standardization rules.",
+        "Discovered that Tier 3 cities drove the highest outlet sales volume despite lower individual item visibility.",
+        "Constructed comparative subplots displaying outlet establishment year trends and fat-content pricing distributions."
+      ],
+      stack: {
+        "Data Manipulation": "Python 3.10+, Pandas, NumPy",
+        "Visualization": "Matplotlib, Seaborn",
+        "Environment": "Jupyter Notebook / VS Code",
+        "Repository": "github.com/nidhi713/Blinkit-Sales-Analysis-Python"
+      }
+    }
+  },
+  {
     id: "ai-data-analyst-agent",
     title: "AI-Powered Data Analyst Agent",
     category: "Agentic AI & Data Analytics",
@@ -272,6 +321,7 @@ export const projects = [
 
 export const categories = [
   "All",
+  "Data Analytics & Visualization",
   "Agentic AI & Data Analytics",
   "Computer Vision & Deep Learning",
   "Agentic AI",

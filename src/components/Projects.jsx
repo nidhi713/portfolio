@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import {
   ExternalLink, Github, Star, ArrowRight, Zap,
-  Layers, X, CheckCircle2, Cpu, ChevronRight, Play
+  Layers, X, CheckCircle2, Cpu, ChevronRight, Play, Image as ImageIcon
 } from 'lucide-react'
 import { projects, categories } from '../data/projects.js'
 
@@ -65,48 +65,75 @@ function ProjectCard({ project, index, onSelect }) {
 
       {/* Preview area */}
       <div
-        className="relative h-44 flex items-center justify-center overflow-hidden border-b border-white/[0.05]"
-        style={{ background: `linear-gradient(135deg, ${c.bg}, rgba(10,10,12,0.8))` }}
+        className="relative h-48 flex items-center justify-center overflow-hidden border-b border-white/[0.05] bg-[#0c0c10]"
       >
-        {/* Animated grid */}
-        <div
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage: `linear-gradient(${c.text}22 1px, transparent 1px), linear-gradient(90deg, ${c.text}22 1px, transparent 1px)`,
-            backgroundSize: '24px 24px',
-          }}
-        />
+        {project.imageUrl || project.image ? (
+          <>
+            <img
+              src={project.imageUrl || project.image}
+              alt={project.title}
+              loading="lazy"
+              className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+              onError={(e) => {
+                e.currentTarget.style.display = 'none'
+              }}
+            />
+            {/* Ambient vignette and readable gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0f0f13] via-[#0f0f13]/40 to-black/30 pointer-events-none" />
+          </>
+        ) : (
+          <>
+            {/* Fallback Animated Gradient & Grid */}
+            <div
+              className="absolute inset-0"
+              style={{ background: `linear-gradient(135deg, ${c.bg}, rgba(10,10,12,0.8))` }}
+            />
+            <div
+              className="absolute inset-0 opacity-20"
+              style={{
+                backgroundImage: `linear-gradient(${c.text}22 1px, transparent 1px), linear-gradient(90deg, ${c.text}22 1px, transparent 1px)`,
+                backgroundSize: '24px 24px',
+              }}
+            />
+            <div
+              className="relative w-16 h-16 rounded-2xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
+              style={{ background: c.bg, border: `1px solid ${c.border}`, boxShadow: `0 0 24px ${c.glow}` }}
+            >
+              <Zap size={28} style={{ color: c.text }} />
+            </div>
+          </>
+        )}
+
         {/* Badges */}
-        <div className="absolute top-3 right-3 flex items-center gap-1.5">
+        <div className="absolute top-3 right-3 flex items-center gap-1.5 z-10">
           {project.demoVideoUrl && (
-            <div className="flex items-center gap-1 px-2 py-1 rounded-md text-[10px] font-semibold border bg-[#7c3aed]/20 text-[#a78bfa] border-[#7c3aed]/30 shadow-[0_0_12px_rgba(124,58,237,0.3)]">
+            <div className="flex items-center gap-1 px-2 py-1 rounded-md text-[10px] font-semibold border bg-[#7c3aed]/20 text-[#a78bfa] border-[#7c3aed]/30 shadow-[0_0_12px_rgba(124,58,237,0.3)] backdrop-blur-md">
               <Play size={9} fill="currentColor" />
               Video Demo
             </div>
           )}
+          {project.imageUrl && (
+            <div className="flex items-center gap-1 px-2 py-1 rounded-md text-[10px] font-semibold border bg-[#00d4ff]/15 text-[#00d4ff] border-[#00d4ff]/30 shadow-[0_0_12px_rgba(0,212,255,0.2)] backdrop-blur-md">
+              <ImageIcon size={9} />
+              Chart Visual
+            </div>
+          )}
           {project.featured && (
-            <div className={`flex items-center gap-1 px-2 py-1 rounded-md text-[10px] font-semibold border ${c.badge}`}>
+            <div className={`flex items-center gap-1 px-2 py-1 rounded-md text-[10px] font-semibold border ${c.badge} backdrop-blur-md`}>
               <Star size={9} fill="currentColor" />
               Featured
             </div>
           )}
         </div>
         {/* Year */}
-        <div className="absolute top-3 left-3 text-[10px] font-mono text-white/30 font-medium">
+        <div className="absolute top-3 left-3 text-[10px] font-mono text-white/50 font-medium z-10 bg-black/40 px-2 py-0.5 rounded backdrop-blur-md border border-white/[0.06]">
           {project.year}
         </div>
         {/* Category */}
-        <div className="absolute bottom-3 left-3">
-          <span className={`text-[10px] font-semibold tracking-widest uppercase px-2 py-1 rounded-md border ${c.badge}`}>
+        <div className="absolute bottom-3 left-3 z-10">
+          <span className={`text-[10px] font-semibold tracking-widest uppercase px-2 py-1 rounded-md border ${c.badge} backdrop-blur-md`}>
             {project.category}
           </span>
-        </div>
-        {/* Central icon */}
-        <div
-          className="relative w-16 h-16 rounded-2xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
-          style={{ background: c.bg, border: `1px solid ${c.border}`, boxShadow: `0 0 24px ${c.glow}` }}
-        >
-          <Zap size={28} style={{ color: c.text }} />
         </div>
       </div>
 
@@ -241,6 +268,35 @@ function ArchitectureModal({ project, onClose }) {
                 >
                   Your browser does not support the video tag.
                 </video>
+              </div>
+            </div>
+          )}
+
+          {/* Embedded Image Showcase (e.g. EDA Dashboards, Visual Analytics) */}
+          {(project.imageUrl || project.image) && !project.demoVideoUrl && (
+            <div className="rounded-xl overflow-hidden border border-white/[0.1] bg-black/60 shadow-[0_12px_40px_rgba(0,0,0,0.6)]">
+              <div className="flex items-center justify-between px-4 py-2.5 bg-white/[0.04] border-b border-white/[0.06] text-xs font-mono text-white/80">
+                <div className="flex items-center gap-2">
+                  <ImageIcon size={13} className="text-[#00d4ff]" />
+                  <span className="font-semibold text-white">Visual Analytics & Performance Dashboard</span>
+                </div>
+                <a
+                  href={project.imageUrl || project.image}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1 text-[10px] text-white/40 hover:text-white transition-colors"
+                >
+                  <span>Open Full Image</span>
+                  <ExternalLink size={10} />
+                </a>
+              </div>
+              <div className="relative bg-[#0c0c10] p-2 flex items-center justify-center max-h-[420px] overflow-hidden">
+                <img
+                  src={project.imageUrl || project.image}
+                  alt={project.title}
+                  className="w-full h-auto max-h-[400px] object-contain rounded-lg"
+                  loading="lazy"
+                />
               </div>
             </div>
           )}
