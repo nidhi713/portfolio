@@ -9,7 +9,9 @@ export const skills = {
   ],
   "Data Science & ML": [
     { name: "Python", level: 98 },
+    { name: "C++ (OOP & DSA)", level: 92 },
     { name: "PyTorch", level: 88 },
+    { name: "OpenCV / Computer Vision", level: 90 },
     { name: "Scikit-Learn", level: 92 },
     { name: "Pandas & NumPy", level: 95 },
     { name: "MySQL", level: 89 },
