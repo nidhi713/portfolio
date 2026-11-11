@@ -1,11 +1,13 @@
 # 🚀 Nidhi Kumari — AI & Intelligent Systems Portfolio
 
-A high-performance, dark-mode personal developer portfolio for **Nidhi Kumari**, an **Agentic AI & Systems Engineer**. Built with **React 18**, **Vite 5**, and **Tailwind CSS 3** to showcase autonomous multi-agent workflows, enterprise RAG applications, machine learning systems, and data pipelines.
+A high-performance, dark-mode personal developer portfolio for **Nidhi Kumari**, an **Agentic AI & Systems Engineer**. Built with **React 18**, **Vite 5**, and **Tailwind CSS 3** to showcase autonomous AI agents, RAG applications, computer vision systems, and data analytics pipelines.
 
-- **GitHub:** [https://github.com/nidhi713](https://github.com/nidhi713)
-- **LinkedIn:** [https://www.linkedin.com/in/nidhi-kumari-6b0331308/](https://www.linkedin.com/in/nidhi-kumari-6b0331308/)
-- **Email:** [nidhitiwaryy011@gmail.com](mailto:nidhitiwaryy011@gmail.com)
+- **🌐 Live Portfolio:** [https://my-portfolio-site-five-lilac.vercel.app](https://my-portfolio-site-five-lilac.vercel.app)
+- **💻 GitHub:** [https://github.com/nidhi713](https://github.com/nidhi713)
+- **🔗 LinkedIn:** [https://www.linkedin.com/in/nidhi-kumari-6b0331308/](https://www.linkedin.com/in/nidhi-kumari-6b0331308/)
+- **📧 Email:** [nidhitiwaryy011@gmail.com](mailto:nidhitiwaryy011@gmail.com)
 
+![Deployed on Vercel](https://img.shields.io/badge/Deployed-Vercel-black?style=flat-square&logo=vercel&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-5.x-646CFF?style=flat-square&logo=vite&logoColor=white)
 ![React](https://img.shields.io/badge/React-18.x-61DAFB?style=flat-square&logo=react&logoColor=black)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.x-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
